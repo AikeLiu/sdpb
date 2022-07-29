@@ -44,8 +44,9 @@ public:
   // to the vectors c and b.  Hopefully the name-clash won't cause
   // confusion.
   El::BigFloat primal_objective, // f + c . x
-    dual_objective,              // f + b . y
-    duality_gap;                 // normalized difference of objectives
+	  dual_objective,              // f + b . y
+	  duality_gap,                 // normalized difference of objectives
+	  lag;
 
   // Discrepancy in the primal equality constraints, a
   // Block_Diagonal_Matrix with the same structure as X, called 'P' in

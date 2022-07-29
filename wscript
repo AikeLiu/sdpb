@@ -76,6 +76,7 @@ def build(bld):
                        'src/sdp_solve/SDP_Solver/run/step/step_length/step_length.cxx',
                        'src/sdp_solve/SDP_Solver/run/step/step_length/min_eigenvalue.cxx',
                        'src/sdp_solve/SDP_Solver/run/step/step_length/lower_triangular_inverse_congruence.cxx',
+                       'src/sdp_solve/SDP_Solver/run/step/compute_lag.cxx',
                        'src/sdp_solve/SDP_Solver_Terminate_Reason/ostream.cxx',
                        'src/sdp_solve/lower_triangular_transpose_solve.cxx',
                        'src/sdp_solve/Block_Diagonal_Matrix/ostream.cxx',

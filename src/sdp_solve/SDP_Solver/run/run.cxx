@@ -57,6 +57,8 @@ void compute_primal_residues_and_error_p_b_Bx(const Block_Info &block_info,
                                               Block_Vector &primal_residue_p,
                                               El::BigFloat &primal_error_p);
 
+El::BigFloat compute_lag(const El::BigFloat mu, const Block_Diagonal_Matrix &X_cholesky, const SDP_Solver &solver);
+
 SDP_Solver_Terminate_Reason
 SDP_Solver::run(const Solver_Parameters &parameters,
                 const Verbosity &verbosity,
@@ -163,6 +165,9 @@ SDP_Solver::run(const Solver_Parameters &parameters,
            sdp, grid, X_cholesky, Y_cholesky, A_X_inv, A_Y, primal_residue_p,
            mu, beta_corrector, primal_step_length, dual_step_length,
            terminate_now, timers);
+	  
+	  lag = compute_lag(mu, X_cholesky, *this);
+
       if(terminate_now)
         {
           terminate_reason
