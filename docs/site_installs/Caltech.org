@@ -3,10 +3,15 @@
   glibc-devel-2.17-260.el7_6.3.x86_64
 
 * sdpb
-** module load cmake/3.10.2 gcc/7.3.0 openmpi/3.0.0 boost/1_68_0-gcc730 eigen/eigen
-*** Can not use openblas module
+#+BEGIN_SRC bash
+   module load cmake/3.10.2 gcc/7.3.0 openmpi/3.0.0 boost/1_68_0-gcc730 eigen/eigen
+#+END_SRC
+
+Can not use openblas module
     It is compiled with the old gcc, and that would require loading
     two different libgfortran.so
+    
+* emental    
 #+BEGIN_SRC bash
 git clone https://gitlab.com/bootstrapcollaboration/elemental.git libelemental
 cd libelemental
