@@ -11,7 +11,7 @@ Can not use openblas module
     It is compiled with the old gcc, and that would require loading
     two different libgfortran.so
     
-* elemental    
+** elemental (Please note that if you are installing for skydiving algorithm, you need a different elemental library)
 #+BEGIN_SRC bash
 git clone https://gitlab.com/bootstrapcollaboration/elemental.git libelemental
 cd libelemental
